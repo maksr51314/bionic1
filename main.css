@@ -1,0 +1,79 @@
+*{
+    width:600px;
+    margin:0 auto;
+}
+h1{
+    font-size: 19px;
+    text-align: center;
+}
+div{
+    border:1px solid #EEE;
+}
+button{
+    width:auto;
+}
+#buttonAdd{
+    width: 100%;
+}
+select{
+    width:30%;
+    margin: 5px 0 5px 0;
+}
+span{
+    width:20%;
+    display:inline-block;
+}
+
+.all input{
+    margin: 5px 0 5px 0;
+    width:75%;
+}
+#addInformation div button{
+    float:right;
+    display:block;
+}
+
+#buttonDel, #buttonEdit, #buttonSave, #buttonCancel, #buttonStarted, #buttonNotStarted, #buttonDone{
+    text-decoration:underline;
+    background:white;
+    border:1px solid #EEE;
+    border-radius:3px;
+}
+#buttonStarted, #buttonNotStarted, #buttonDone{
+    vertical-align: bottom;
+}
+#buttonDel:hover, #buttonEdit:hover, #buttonSave:hover, #buttonCancel:hover{
+    text-decoration:underline;
+    background:#EEF;
+    border:1px solid #EEE;
+    border-radius:3px;
+}
+#buttonSave, #buttonCancel{
+    background: #a1ff14;
+}
+#editTaskName, #editTaskDesc{
+    width:70%;
+}
+#addInformation div{
+    width:auto;
+    border:1px solid #EEE;
+    padding:0 10px 25px 10px;
+    border-radius:5px;
+    margin:0 0 10px 0;
+}
+#txtTaskName{
+    font-weight: bold;
+    font-size: 18;
+}
+#txtTaskDesc{
+    margin: 6px;
+    font-size: 13px;
+    font-style: italic;
+}
+#txtTaskDiff{
+    font-size: 12px;
+}
+textarea{
+    margin: 5px 0 5px 0;
+    max-width: 75%;
+}
