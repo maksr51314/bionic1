@@ -33,7 +33,7 @@ span{
     display:block;
 }
 
-#buttonDel, #buttonEdit, #buttonSave, #buttonCancel, #buttonStarted, #buttonNotStarted, #buttonDone{
+#buttonDel, #buttonEdit, #buttonSave, #buttonCancel, #buttonNotFixed, #buttonInProgress,#buttonReadyForTest,#buttonWontFixed{
     text-decoration:underline;
     background:white;
     border:1px solid #EEE;
@@ -76,4 +76,5 @@ span{
 textarea{
     margin: 5px 0 5px 0;
     max-width: 75%;
+    min-width: 75%;
 }

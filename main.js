@@ -25,7 +25,7 @@ document.getElementById("buttonAdd").onclick = function(){
     taskDesc.innerHTML = desc;
     taskDesc.id = "txtTaskDesc";
     var taskDiff = document.createElement("p");
-    taskDiff.innerHTML = diff;
+    taskDiff.innerHTML = diff + "/10";
     taskDiff.id = "txtTaskDiff";
     var taskMyType = document.createElement("p");
     taskMyType.innerHTML = myType;
@@ -91,34 +91,34 @@ document.getElementById("buttonAdd").onclick = function(){
         editTaskDiff.style.display = "none";
         taskDesc.style.display = "block";
         taskDesc.innerHTML = editTaskDesc.value;
-        taskDiff.innerHTML = editTaskDiff.value;
+        taskDiff.innerHTML = editTaskDiff.value + "/10";
         taskDiff.style.display = "inline";
         taskMyTime.innerHTML = myTime.myNow;
     });
 
-    var buttonNotStarted = createButton("NotStarted", "buttonNotStarted", function(){
-        container.style.background = "rgba(255, 36, 138, 0.14)";
-        notStartedMode();
+    var buttonNotFixed = createButton("Not fixed", "buttonNotFixed", function(){
+        notFixedMode();
     });
-
-    var buttonStarted = createButton("Started", "buttonStarted", function(){
-        container.style.background = "rgba(250, 255, 71, 0.15)";
-        startedMode();
+    var buttonInProgress = createButton("In progress", "buttonInProgress", function(){
+        inProgressMode();
     });
-
-    var buttonDone = createButton("done", "buttonDone", function(){
-        container.style.background = "rgba(34, 181, 255, 0.16)";
-        doneMode();
+    var buttonReadyForTest = createButton("Ready for test", "buttonReadyForTest", function(){
+        readyForTestMode();
     });
-
-    var doneMode = function(){
-
+    var buttonWontFixed = createButton("Fixed, won't fix", "buttonWontFixed", function(){
+        wontFixedMode();
+    });
+    var notFixedMode = function(){
+        container.style.background = "rgba(223, 233, 29, 0.20)";
     };
-    var startedMode = function(){
-
+    var inProgressMode = function(){
+        container.style.background = "rgba(233, 61, 53, 0.20)";
     };
-    var notStartedMode = function(){
-
+    var readyForTestMode = function(){
+        container.style.background = "rgba(45, 189, 104, 0.31)";
+    };
+    var wontFixedMode = function(){
+        container.style.background = "rgba(80, 46, 233, 0.20)";
     };
 
     // Режим редактирования
@@ -161,9 +161,10 @@ document.getElementById("buttonAdd").onclick = function(){
     container.appendChild(editTaskDiff);
     container.appendChild(taskMyType);
     container.appendChild(taskMyTime);
-    container.appendChild(buttonNotStarted);
-    container.appendChild(buttonStarted);
-    container.appendChild(buttonDone);
+    container.appendChild(buttonWontFixed);
+    container.appendChild(buttonNotFixed);
+    container.appendChild(buttonReadyForTest);
+    container.appendChild(buttonInProgress);
 
     document.getElementById("addInformation").appendChild(container);
 
